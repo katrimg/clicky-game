@@ -1,4 +1,4 @@
-//imports dependencies and files
+//import all dependencies 
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import rappers from "./rappers.json";
 import "./App.css";
 
-//sets state to 0 or empty
+//setting the state for App
 class App extends Component {
   state = {
     rappers,
@@ -15,43 +15,50 @@ class App extends Component {
     score: 0
   };
 
-//when you click on a card ... the rapper is taken out of the array
+//take a clicked rapper out of the array of rappers
   imageClick = event => {
     const currentRappers = event.target.alt;
     const RappersAlreadyClicked =
       this.state.clickedRappers.indexOf(currentRappers) > -1;
 
-//if you click on a rapper that has already been selected, the game is reset and cards reordered
+//if the rapper has already been clicked, then
     if (RappersAlreadyClicked) {
       this.setState({
+        //resort the rappers randomly
         rappers: this.state.rappers.sort(function(a, b) {
           return 0.5 - Math.random();
         }),
         clickedRappers: [],
+        //set score back to 0
         score: 0
       });
-        alert("You lose. Play again?");
+//test comment
 
-//if you click on an available rapper, your score is increased and cards reordered
+
+
+//else, 
     } else {
       this.setState(
         {
+          //randomly order cards
           rappers: this.state.rappers.sort(function(a, b) {
             return 0.5 - Math.random();
           }),
           clickedRappers: this.state.clickedRappers.concat(
             currentRappers
           ),
+          //increase score by 1
           score: this.state.score + 1
         },
-//if you get all 12 rappers correct you get a congrats message and the game resets        
+//if score reaches 12 then alert win message       
         () => {
           if (this.state.score === 12) {
-            alert("Yay! You Win!");
+            alert("You Win!!!");
             this.setState({
               rappers: this.state.rappers.sort(function(a, b) {
                 return 0.5 - Math.random();
               }),
+              //set score and clicked back to 0
               clickedRappers: [],
               score: 0
             });
@@ -61,7 +68,7 @@ class App extends Component {
     }
   };
 
-//the order of components to be rendered: navbar, jumbotron, friendcard, footer 
+//render the navbar, jumbotron, playingcard, and footer 
   render() {
     return (
       <div>
@@ -84,4 +91,5 @@ class App extends Component {
     );
   }
 }
+//export app
 export default App;

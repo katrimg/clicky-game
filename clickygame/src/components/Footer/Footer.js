@@ -1,4 +1,4 @@
-//sets up the reusable Footer component
+//footer component
 import React from "react";
 import "./Footer.css";
 

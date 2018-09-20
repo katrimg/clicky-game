@@ -1,4 +1,4 @@
-//sets up the reusable Jumbotron component
+//Jumbotron component
 import React from "react";
 import "./Jumbotron.css";
 
