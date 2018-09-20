@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "image": "playboi-carti.jpg"
+    },
+    {
+      "id": 2,
+      "image": "eminem.jpg"    
+    },
+    {
+      "id": 3,
+      "image": "XXXTentacion.jpg"
+    },
+    {
+      "id": 4,
+      "image": "Mac-Miller.jpg" 
+    },
+    {
+      "id": 5,
+      "image": "migos.jpg"
+    },
+    {
+      "id": 6,
+      "image": "Lil-Yatchy.jpg"
+    },
+    {
+      "id": 7,
+      "image": "j-cole.jpg"
+    },
+    {
+      "id": 8,
+      "image": "kendrick-lamar.jpg"
+    },
+    {
+      "id": 9,
+      "image": "kanye.jpg"
+    },
+    {
+      "id": 10,
+      "image": "Tyga.jpg"
+    },
+    {
+      "id": 11,
+      "image": "ty-dolla-sign.jpg"
+    },
+    {
+      "id": 12,
+      "image": "Dr-Dre.jpg"
+    }
+  ]
